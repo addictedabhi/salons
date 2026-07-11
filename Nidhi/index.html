@@ -16,6 +16,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/styles.css">
+<script>
+// Apply saved theme before first paint to avoid a flash of the default palette
+try { document.documentElement.dataset.theme = localStorage.getItem('nidhi-theme') || 'midnight'; } catch (e) {}
+</script>
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -48,6 +52,9 @@
 </script>
 </head>
 <body>
+
+<!-- THEME SWITCHER -->
+<div class="theme-bar" role="group" aria-label="Choose a colour theme"></div>
 
 <!-- NAV -->
 <header class="site-header">
